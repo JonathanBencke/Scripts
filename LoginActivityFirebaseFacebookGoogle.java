@@ -1,4 +1,3 @@
-package com.bencke.jonat.uhere;
 
 import android.content.Intent;
 import android.net.Uri;
