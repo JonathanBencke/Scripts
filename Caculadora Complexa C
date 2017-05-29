@@ -1,0 +1,693 @@
+/* PROGRAMA: CALCULADORA COMPLEXA */
+/* TIPO: OPEN - SOURCE */
+/* O CONHECIMENTO SÓ VIRA COM O TEMPO E DEDICAÇÃO */
+/*SE VOCÊ SE DEDICAR PORDERÁ DOMINAR QUALQUER COISA FERRAMENTAS, LINGUAGENS !!*/
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#define PI 3.14
+
+int main ()
+{
+int op;
+voltar: //reinicia o programa //
+
+do {
+ExibeData(); //função que exibe data e hora //
+printf ("\n");
+printf ("|||||||||||||||||||||||||||||||||||||||||||||\n");
+printf ("[1]CALCULA A AREA ||\n");
+printf ("[2]CALCULA A AREA DO TRIANGULO ||\n");
+printf ("[3]CALCULA A AREA DO QUADRADO ||\n");
+printf ("[4]CALCULA A AREA DO CIRCULO ||\n");
+printf ("[5]CALCULA A AREA DO RETANGULO ||\n");
+printf ("[6]CALCULA A AREA DO CILINDRO ||\n");
+printf ("[7]CALCULA A AREA DO TRAPEZIO ||\n");
+printf ("[8]CALCULA A AREA DO HEXAGONO ||\n");
+printf ("[9]CALCULA A AREA DO PENTAGONO ||\n");
+printf ("[10]CALCULA A AREA DO POLIGONO REGULAR ||\n");
+printf ("[11]CALCULA A AREA DO ROMBOIDE ||\n");
+printf ("[12]CALCULA A AREA DO LOSANGO ||\n");
+printf ("[13]CALCULA A AREA DO TETRAEDRO REGULAR ||\n");
+printf ("[14]CALCULA SEU IMC ||\n");
+printf ("[15]TABUADA COMPLETA ||\n");
+printf ("[16]CALCULA SUA IDADE REAL ||\n");
+printf ("[17]CALCULA SUA MEDIA ESCOLAR ||\n");
+printf ("[18]CALCULADORA ||\n");
+printf ("[19]AJUDA SOBRE O PROGRAMA ||\n");
+printf ("|||||||||||||||||||||||||||||||||||||||||||||\n");
+printf ("[>]");
+
+
+scanf ("%d",&op);
+
+
+} while (op < 1 || op > 20);
+if (op == 1)
+CalculaArea();
+
+else if (op == 2)
+CalculaAreaDoTriangulo();
+
+else if (op == 3)
+CalculaAreaDoQuadrado();
+
+else if (op == 4)
+CalculaAreaDoCirculo();
+
+else if (op == 5)
+CalculaAreaDoRetangulo();
+
+else if (op == 6)
+CalculaAreaDoCilindro();
+
+else if (op == 7)
+CalculaAreaDoTrapezio();
+
+else if (op == 8)
+CalculaAreaDoHexagono();
+
+else if (op == 9)
+CalculaAreaDoPentagono();
+
+else if (op == 10)
+CalculaAreaDoPoligonoRegular();
+
+else if (op == 11)
+CalculaAreaDoRomboide();
+
+else if (op == 12)
+CalculaAreaDoLosango();
+
+else if (op == 13)
+CalculaAreaDoTetraedro();
+
+else if (op == 14)
+CalculaImc();
+
+else if (op == 15)
+Tabuada();
+
+else if (op == 16)
+IdadeReal();
+
+else if (op == 17)
+CalculaMediaEscolar();
+
+else if (op == 18)
+Calculadora();
+
+else if (op == 19)
+Ajuda();
+
+goto voltar; //reinicia o programa//
+
+
+}
+void CalculaArea(float area){
+printf ("informe Area: ");
+scanf ("%f",&area);
+
+float total = (area * area);
+
+printf ("CALCULANDO...\n");
+system ("sleep 2"); //espera 2 segundos e continua //
+system ("cls"); //mude para clear caso esteja usando linux//
+printf ("CONCLUIDO !!!\n");
+
+
+printf ("RESULTADO: %.2f\n",total);
+
+
+}
+
+void CalculaAreaDoTriangulo(float base, float altura){
+printf ("informe a base: ");
+scanf ("%f",&base);
+
+printf ("informe a altura: ");
+scanf ("%f",&altura);
+
+float area = (base * altura ) / 2;
+
+printf ("CALCULANDO...\n");
+system ("sleep 2");
+system ("cls");
+printf ("CONCLUIDO !!!\n");
+
+
+printf ("RESULTADO: %.2f\n",area);
+
+}
+
+void CalculaAreaDoQuadrado(float lado){
+printf ("informe o lado: ");
+scanf ("%f",&lado);
+
+float area = (lado * lado);
+
+printf ("CALCULANDO...\n");
+system ("sleep 2");
+system ("cls");
+printf ("CONCLUIDO !!!\n");
+
+
+printf ("RESULTADO: %.2f\n",area);
+
+
+}
+
+void CalculaAreaDoCirculo(float raio){
+printf ("informe o raio:");
+scanf ("%f",&raio);
+
+float area = (PI * raio * raio);
+
+printf ("CALCULANDO...\n");
+system ("sleep 2");
+system ("cls");
+printf ("CONCLUIDO !!!\n");
+
+
+printf ("RESULTADO: %.2f\n",area);
+}
+
+void CalculaAreaDoRetangulo(float base, float altura){
+printf ("informe a base: ");
+scanf ("%f",&base);
+
+printf ("informe a altura: ");
+scanf ("%f",&altura);
+
+float area = (base * altura);
+
+printf ("CALCULANDO...\n");
+system ("sleep 2");
+system ("cls");
+printf ("CONCLUIDO !!!\n");
+
+
+printf ("RESULTADO: %.2f\n",area);
+}
+
+void CalculaAreaDoCilindro(float raio, float altura){
+printf ("informe o raio: ");
+scanf ("%f",&raio);
+
+printf ("informe a altura: ");
+scanf ("%f",&altura);
+
+float area = (2 * PI * raio * (raio + altura));
+
+printf ("CALCULANDO...\n");
+system ("sleep 2");
+system ("cls");
+printf ("CONCLUIDO !!!\n");
+
+
+
+printf ("RESULTADO: %.2f\n",area);
+}
+
+void CalculaAreaDoTrapezio(float basemaior, float basemenor, float altura){
+printf ("informe a base maior: ");
+scanf ("%f",&basemaior);
+
+printf ("informe a base menor: ");
+scanf ("%f",&basemenor);
+
+printf ("informe a altura: ");
+scanf ("%f",&altura);
+
+float area = (basemenor + basemaior ) * (altura / 2);
+
+printf ("CALCULANDO...\n");
+system ("sleep 2");
+system ("cls");
+printf ("CONCLUIDO !!!\n");
+
+
+printf ("RESULTADO: %.2f\n",area);
+
+
+}
+
+void CalculaAreaDoHexagono(float lado, float perimetro, float apotema){
+printf ("informe o lado: ");
+scanf ("%f",&lado);
+
+printf ("informe o perimetro: ");
+scanf ("%f",&perimetro);
+
+printf ("informe a apotema: ");
+scanf ("%f",&apotema);
+
+float area = (perimetro * apotema) / lado;
+
+printf ("CALCULANDO...\n");
+system ("sleep 2");
+system ("cls");
+printf ("CONCLUIDO !!!\n");
+
+
+printf ("RESULTADO: %.2f",area);
+
+
+
+}
+
+void CalculaAreaDoPentagono(float apotema, float perimetro){
+
+printf ("informe a apotema: ");
+scanf ("%f",&apotema);
+
+printf ("informe o perimetro: ");
+scanf ("%f",&perimetro);
+
+float area = (apotema * perimetro) / 2;
+
+printf ("CALCULANDO...\n");
+system ("sleep 2");
+system ("cls");
+printf ("CONCLUIDO !!!\n");
+
+
+printf ("RESULTADO: %.2f\n",area);
+
+}
+
+void CalculaAreaDoPoligonoRegular(float nlados, float lado){
+printf ("informe o numero de lados: ");
+scanf ("%f",&nlados);
+
+printf ("informe o lado: ");
+scanf ("%f",&lado);
+
+float area = (nlados * lado) / 2;
+
+printf ("CALCULANDO...\n");
+system ("sleep 2");
+system ("cls");
+printf ("CONCLUIDO !!!\n");
+
+
+printf ("RESULTADO: %.2f\n",area);
+
+}
+
+void CalculaAreaDoRomboide(float base , float altura){
+printf ("informe a base: ");
+scanf ("%f",&base);
+
+printf ("informe a altura: ");
+scanf ("%f",&altura);
+
+float area = (base * altura);
+
+printf ("CALCULANDO...\n");
+system ("sleep 2");
+system ("cls");
+printf ("CONCLUIDO !!!\n");
+
+printf ("RESULTADO: %.2f\n",area);
+
+
+}
+void CalculaAreaDoLosango(float dmaior, float dmenor){
+printf ("informe a diagonal maior: ");
+scanf ("%f",&dmaior);
+
+printf ("informe a diagonal menor: ");
+scanf ("%f",&dmenor);
+
+float area = (dmaior * dmenor) / 2;
+
+printf ("CALCULANDO...\n");
+system ("sleep 2");
+system ("cls");
+printf ("CONCLUIDO !!!\n");
+
+printf ("RESULTADO: %.2f\n",area);
+
+}
+
+void CalculaAreaDoTetraedro(float aresta){
+printf ("informe a aresta:");
+scanf ("%f",&aresta);
+
+float area = (3 * (aresta * aresta));
+
+printf ("CALCULANDO...\n");
+system ("sleep 2");
+system ("cls");
+printf ("CONCLUIDO !!!\n");
+
+printf ("RESULTADO: %.2f\n",area);
+
+
+}
+
+void CalculaImc(int peso, float altura, float imc){
+printf ("\nINFORME SUA ALTURA:(EX. 1.91): ");
+scanf ("%f",&altura);
+
+printf ("\nINFORME SEU PESO(EX. 55): ");
+scanf ("%d",&peso);
+
+imc = peso / (altura * altura); //IMC = PESO DIVIDIDO PELA ALTURA AO QUADRADO//
+
+printf ("\n\tFAIXA NORMAL: 16 ATE 16,99 kg\n");
+printf ("\n\tBAIXO PESO: 17 ATE 18,49 kg\n");
+printf ("\n\tPESO NORMAL: 18,50 ATE 24,99 kg\n");
+printf ("\n\tSOBREPESO: 25 ATE 29,99 kg\n");
+printf ("\n\tOBESIDADE GRAU 1: 30 ATE 34,99 kg\n");
+printf ("\n\tOBESIDADE GRAU 2: 35 ATE 39,99 kg\n");
+printf ("\n\tOBESIDADE MORBIDA: MARIO QUE 40 kg\n\n");
+
+if (imc >= 17 && imc <= 18.49)
+printf ("(FAIXA NORMAL)\n");
+
+else if (imc >= 17 && imc <= 18.49)
+printf ("(BAIXO PESO)\n");
+
+else if (imc >= 18.50 && imc <= 24.99)
+printf ("(PESO NORMAL)\n");
+
+else if (imc >= 25 && imc <= 29.99)
+printf ("(SOBREPESO)\n");
+
+else if (imc >= 30 && imc <= 34.99)
+printf ("(OBESIDADE GRAU 1)\n");
+
+else if (imc >= 35 && imc <= 39.99 )
+printf ("(OBESIDADE GRAU 2)\n");
+
+else
+printf ("(OBESIDADE MORBIDA)\n");
+
+printf (" SEU IMC: %.2f kg ",imc);
+}
+
+void Tabuada(int i, int b, int result, int op){
+
+voltar2:
+printf (">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
+printf ("<><><><><><><><><><><><>><><><><><><>\n");
+printf ("<> [1]TABUADA DE ADICAO <>\n");
+printf ("<> [2]TABUADA DE MULTIPLICACAO <>\n");
+printf ("<> [3]TABUADA DE DIVISAO <>\n");
+printf ("<> [4]TABUADA DE SUTBTRACAO <>\n");
+printf ("<> [>]");
+
+scanf ("%d",&op);
+
+while (op < 1 || op > 4)
+goto voltar2; //voltar caso a opçao seja invalida //
+system ("color 0b");
+
+if (op == 1)
+{
+
+for (i=1; i<11; i++)
+for (b=1; b<11; b++)
+{
+result = i + b;
+printf ("\n%d + %d = %d\n",i,b,result); //adição//
+}
+
+}
+
+if (op == 2)
+{
+
+for (i=1; i<11; i++)
+for (b=1; b<11; b++)
+{
+result = i * b;
+printf ("\n%d x %d = %d\n",i,b,result); //subtração//
+}
+
+}
+
+
+if (op == 3)
+{
+
+for (i=1; i<11; i++)
+for (b=1; b<11; b++)
+{
+result = i / b;
+printf ("\n%d / %d = %d\n",i,b,result); //divisao interia//
+}
+
+}
+
+if (op == 4)
+{
+
+for (i=1; i<11; i++)
+for (b=1; b<11; b++)
+
+{
+result = i - b;
+printf ("\n%d - %d = %d\n",i,b,result); //subtração//
+
+}
+
+}
+system ("pause \n");
+system ("cls");
+
+
+
+}
+
+void IdadeReal(int anoatual, int anodenascimento, int idade){
+int minutos = 60; // minutos //
+int diasnoano = 365; // dias do ano //
+int horas = 24; // horas //
+int meses = 12; // meses //
+int segundos = 60; // segundos //
+
+printf ("\nINFORME O ANO ATUAL (EX: 2017): ");
+scanf ("%d",&anoatual);
+
+
+printf ("\nINFORME O ANO DE NASCIMENTO (EX: 1999): ");
+scanf ("%d",&anodenascimento);
+
+
+printf ("\n\nINFORME O MES DE NASCIMENTO: (EX: 11): ");
+scanf ("%d",&meses);
+
+//USEI O IF ELSE POR SER MAIS PRECISO//
+
+if (meses >= 1 )
+idade = idade + 1;
+
+else if (meses <= 2)
+idade = idade - 1;
+
+else if (meses <= 3)
+idade = idade + 1;
+
+else if (meses <= 4)
+idade = idade - 1;
+
+else if (meses <= 5)
+idade = idade + 1;
+
+else if (meses <= 6)
+idade = idade - 1;
+
+else if (meses <= 7)
+idade = idade + 1;
+
+else if (meses <= 8)
+idade = idade - 1;
+
+else if (meses <= 9)
+idade = idade + 1;
+
+else if (meses <= 10 )
+idade = idade - 1;
+
+else if (meses <= 11)
+idade = idade + 1;
+
+else if (meses <= 11)
+idade = idade - 1;
+
+else if (meses <= 12)
+idade = idade + 1;
+
+else if (meses >= 1)
+idade = idade - 1;
+
+else if (meses >= 2)
+idade = idade + 1;
+
+else if (meses >= 3)
+idade = idade - 1;
+
+else if (meses >= 4)
+idade = idade + 1;
+
+else if (meses >= 5)
+idade = idade - 1;
+
+if (meses >= 6);
+idade = idade + 1;
+
+if (meses >= 7);
+idade = idade - 1;
+
+if (meses >= 8);
+idade = idade + 1;
+
+if (meses >= 9);
+idade = idade - 1;
+
+if (meses >= 10)
+idade = idade + 1;
+
+else if (meses >= 11)
+idade = idade - 1;
+
+if (meses >= 12)
+idade = idade + 1;
+
+
+
+idade = anoatual - anodenascimento; //ANO ATUAL MENOS O ANO DE NASCIMENTO//
+
+printf ("\n\nVOCE TEM %d OU %d ANOS ",idade -1,idade); //IDADE//
+
+printf ("\n\nVOCE TEM %d MESES DE VIDA",idade * meses); //MES//
+
+printf ("\n\nVOCE TEM %d DIAS DE VIDA",idade * diasnoano); //DIAS//
+
+printf ("\n\nVOCE TEM %d HORAS DE VIDA",idade * diasnoano * horas); //HORAS//
+
+printf ("\n\nVOCE TEM %d MINUTOS DE VIDA",idade * diasnoano * horas * minutos); //MINUTOS//
+
+printf ("\n\nVOCE TEM %d SEGUNDOS DE VIDA\n\n", idade * diasnoano * horas * minutos * segundos); //SEGUNDOS//
+
+
+
+}
+
+void CalculaMediaEscolar(void){
+float n1,n2,n3,n4;
+float media;
+
+
+
+voltar1: //caso nota seja maior que 10 voltar novamente//
+
+printf ("\n\n\tNome: Note Scholl");
+printf ("\ndesenvolvido por: CR!PTOR");
+printf ("\n\tversion: 1.0");
+printf ("\nAperte Ctrl + C para Sair:");
+printf ("\n\nAVISO: no lugar de virgula coloque ponto\n\to programa nao aceita virgula");
+printf("\t\n\ninforme a primeira nota: ");
+scanf ("%f",&n1);
+if (n1 > 10)//se nota maior que 10 voltar a pedir a nota novamente//
+goto voltar1; //caso nota seja maior que 10 voltar para o marcado voltar1//
+
+voltar2: //marcador da n2//
+printf("\n\ninforme a segunda nota: ");
+scanf ("%f",&n2);
+if (n2 > 10)//se nota maior que 10 voltar a pedir a nota novamente//
+goto voltar2; //caso nota seja maior que 10 voltar para o marcado volta2//
+
+voltar3://marcador da n3//
+printf ("\n\ninforme a terceira nota: ");
+scanf ("%f",&n3);
+if (n3 > 10)//se nota maior que 10 voltar a pedir a nota novamente//
+goto voltar3; //caso nota seja maior que 10 voltar para o marcado voltar3//
+
+voltar4://marcador da n4//
+printf ("\n\ninforme a quarta nota: ");
+scanf ("%f",&n4);
+if (n4 > 10)//se nota maior que 10 voltar a pedir a nota novamente//
+goto voltar4; //caso nota seja maior que 10 voltar para o marcado voltar4//
+
+media = n1*2 + n2*3 + n3*2 + n4*3; //atribuindo a variavel media a notas//
+if (media >= 50)//caso a media seja maior ou igual a 50 aluno aprovado//
+printf ("\n|||ALUNO(a) APROVADO COM %.1f PONTOS|||",media);
+
+else if (media < 50)//caso a media seja menor que 50 aluno reprovado//
+printf ("\n|||ALUNO(a) REPROVADO COM %.1f PONTOS|||",media);
+
+
+return (0);
+
+
+}
+
+void Calculadora(void){
+float num1, num2;
+char total; //operadores |/| |*| |-| |+| //
+
+
+printf ("\tCALCULADORA 1.0\n");
+printf ("\tDESENVOLVEDOR: CR!PTOR\n");
+printf ("\tAVISO: NO LUGAR DE VIRGULA COLOQUE PONTO\n");
+printf ("\tEXEMPLO: 5.5 + 2 \n");
+printf ("\tOPERADORES [+] [/] [*] [-]\n");
+printf ("\tPARA SAI APERTE Ctrl + C\n");
+
+
+voltar: //marcado//
+voltar1: //marcado//
+
+
+printf ("\n\tInforme a Opera%cao: ",135);
+scanf ("%f %c %f",&num1,&total,&num2);
+
+
+switch(total)
+{
+case '+':{
+float a = num1 + num2;
+printf("\tsoma = %.2f\n",a);}
+
+
+case '-':{
+float b = num1 - num2;
+printf ("\tsubtracao: = %.2f\n",b);}
+
+
+case '*': case 'x': case 'X':{
+float c = num1 * num2;
+printf ("\tmultiplicacao: = %.2f\n",c);}
+
+
+case '/':{
+float d = num1 / num2;
+printf ("\tdivisao: = %.2f\n",d);}
+goto voltar; //voltar a executar o programa novamente //
+
+default:
+printf ("\n\tNao e uma Operacao !!!\n");
+goto voltar1; //voltar para o marcado 1 caso operação seja invalida //
+
+
+}
+}
+
+void ExibeData(void){
+printf ("HORA ");
+system ("time /t ");
+printf ("DATA ");
+system ("date /t"); //exibe a data e hora atual //
+}
+
+void Ajuda(void){
+printf (" PARA VOCE USAR A CALCULADORA COMPLEXA E FACIL INFORME O\n");
+printf (" NUMERO DA OPCAO DESEJADA\n");
+printf ("DEPOIS E SO INFORMA OS VALORES QUE VOCE DESEJA CALCULAR\n");
+printf ("E PRONTO PARA VOCE SAIR DA CALCULADORA APERTE CTRL + C\n");
+}
